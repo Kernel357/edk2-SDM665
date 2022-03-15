@@ -1,0 +1,58 @@
+#
+#  Copyright (c) 2018, Linaro Limited. All rights reserved.
+#
+#  This program and the accompanying materials
+#  are licensed and made available under the terms and conditions of the BSD License
+#  which accompanies this distribution.  The full text of the license may be found at
+#  http://opensource.org/licenses/bsd-license.php
+#
+#  THE PROGRAM IS DISTRIBUTED UNDER THE BSD LICENSE ON AN "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR REPRESENTATIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED.
+#
+
+[Defines]
+  DEC_SPECIFICATION              = 0x0001001a
+  PACKAGE_NAME                   = Mi_A3Pkg
+  PACKAGE_GUID                   = 7eb1de03-3910-4d1d-84ce-c17b53636b9a
+  PACKAGE_VERSION                = 0.1
+
+################################################################################
+#
+# Include Section - list of Include Paths that are provided by this package.
+#                   Comments are used for Keywords and Module Types.
+#
+# Supported Module Types:
+#  BASE SEC PEI_CORE PEIM DXE_CORE DXE_DRIVER DXE_RUNTIME_DRIVER DXE_SMM_DRIVER DXE_SAL_DRIVER UEFI_DRIVER UEFI_APPLICATION
+#
+################################################################################
+[Includes.common]
+  Include                        # Root include for the package
+
+[Guids.common]
+  gMi_A3PkgTokenSpaceGuid        = { 0x99a14446, 0xaad7, 0xe460, {0xb4, 0xe5, 0x1f, 0x79, 0xaa, 0xa4, 0x93, 0xfd } }
+  gUsbfnMsdAppFileGuid                = { 0x1C207232, 0x4086, 0x9BE7, { 0xDB, 0x16, 0x15, 0x9D, 0x66, 0xAB, 0x46, 0x6A } }
+  gSwitchSlotsAppFileGuid             = { 0xD5BC0FB1, 0xA833, 0x4607, { 0xB7, 0xB6, 0x5E, 0xF9, 0xD1, 0x0B, 0xEE, 0xB7 } }
+  gSimpleInitFileGuid                 = { 0x6D77B2BB, 0x69EB, 0x42AB, { 0xBE, 0xCF, 0x4F, 0x40, 0xC8, 0x95, 0x68, 0xC3 } }
+
+[Protocols]
+  gEFIDroidKeypadDeviceProtocolGuid = { 0xb27625b5, 0x0b6c, 0x4614, { 0xaa, 0x3c, 0x33, 0x13, 0xb5, 0x1d, 0x36, 0x46 } }
+  # SCM
+  gQcomScmProtocolGuid     =            { 0x77ed108d, 0x8524, 0x4b8b, { 0x9d, 0x2e, 0x34, 0x98, 0x7a, 0xec, 0xb9, 0xc1 } }
+
+  #PMIC Power ON Protocol
+  gQcomPmicPwrOnProtocolGuid =          { 0x9ba45b66, 0xefa4, 0x441c, { 0xa3, 0xe4, 0xed, 0x22, 0x24, 0x78, 0x6b, 0xe2 } }
+  # PlatformInfo
+  gEfiPlatformInfoProtocolGuid =        { 0x157a5c45, 0x21b2, 0x43c5, { 0xba, 0x7c, 0x82, 0x2f, 0xee, 0x5f, 0xe5, 0x99 } }
+
+[PcdsFixedAtBuild.common]
+  # Simple FrameBuffer
+  gMi_A3PkgTokenSpaceGuid.PcdMipiFrameBufferAddress|0x5c000000|UINT32|0x0000a400
+  gMi_A3PkgTokenSpaceGuid.PcdMipiFrameBufferHeaderAddress|0x5c000000|UINT32|0x0000a401
+  gMi_A3PkgTokenSpaceGuid.PcdMipiFrameBufferFooterAddress|0x5c000000|UINT32|0x0000a402
+  gMi_A3PkgTokenSpaceGuid.PcdMipiFrameBufferWidth|720|UINT32|0x0000a403
+  gMi_A3PkgTokenSpaceGuid.PcdMipiFrameBufferHeight|1560|UINT32|0x0000a404
+
+  gMi_A3PkgTokenSpaceGuid.PcdMipiFrameBufferPixelBpp|32|UINT32|0x0000a405
+  gMi_A3PkgTokenSpaceGuid.PcdMipiFrameBufferVisibleWidth|720|UINT32|0x0000a406
+  gMi_A3PkgTokenSpaceGuid.PcdMipiFrameBufferVisibleHeight|1560|UINT32|0x0000a407
+  gMi_A3PkgTokenSpaceGuid.PcdMipiFrameBufferDelay|0|UINT32|0x0000a408
