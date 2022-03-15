@@ -6,7 +6,7 @@ This is an implementation of EDK2 on Mi A3 4/64 (SDM665). So far, almost nothing
 
 Progress:
 
-![dodj](https://github.com/Kernel357/edk2-mi_a3/raw/main/CtEQIwcqbMA.jpg)
+![](https://github.com/Kernel357/edk2-SDM665/raw/Mi-A3/CtEQIwcqbMA.jpg)
 
 Who wants to help, write to torbama35@gmail.com.
 
