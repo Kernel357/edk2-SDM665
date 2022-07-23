@@ -1,13 +1,20 @@
-# EDK2 for Mi A3
+# EDK2 for SDM665
 
-The beginning of my journey in EDK2 UEFI...
+This is an implementation of EDK2 for SDM665.
 
-This is an implementation of EDK2 on Mi A3 4/64 (SDM665). So far, almost nothing works :( There is debug output via Framebuffer. Now we have a problem in initializing the MMU, so the DXE core does not start... This was created based on edk2-lavender by serdeliuk.
+# Works on these devices:
+- Xiaomi Mi A3 4/64 (laurel_sprout) 
+- Xiaomi Redmi Note 8 4/64 (ginkgo)
 
+# Working:
+- Display 
+- UEFI shell
 
+# Not working:
+- USB
 
-![](https://github.com/Kernel357/edk2-SDM665/raw/Mi-A3/CtEQIwcqbMA.jpg)
+# Credits:
+- @Robotix22 for edk2-ginkgo
 
+# Help
 Who wants to help, write to torbama35@gmail.com.
-
-Thanks for attention!
