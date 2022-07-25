@@ -16,5 +16,5 @@ This is an implementation of EDK2 for SDM665.
 ## Credits:
 - **Robotix22** for **edk2-ginkgo**
 
-## Help
+## Help:
 Who wants to help, write to torbama35@gmail.com.
