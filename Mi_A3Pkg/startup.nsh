@@ -1,3 +1,0 @@
-#cls
-#devices
-#map
